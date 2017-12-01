@@ -1,6 +1,7 @@
 'use strict';
 
 var Angular    = require('angular');
+
 var State      = require('./state');
 var Controller = require('./controller');
 

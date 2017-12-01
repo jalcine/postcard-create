@@ -14,7 +14,7 @@ module.exports = function ($scope, Postcard) {
 
     Postcard.create(payload)
     .then(function (postcard) {
-      $scope.payload = postcard;
+      $scope.postcard = postcard;
     })
     .catch(function (err) {
       $scope.error = err.message;
