@@ -4,25 +4,25 @@ var expect  = require('chai').expect;
 var Angular = require('angular');
 var Sinon   = require('sinon');
 
-var Config  = require('../../config');
+var Config = require('../../config');
 
 require('angular-mocks');
 
-describe('postcard service', function () {
+describe('postcard service', () => {
   var $q;
   var $rootScope;
   var API;
   var Postcard;
 
-  beforeEach(Angular.mock.inject(function ($injector) {
+  beforeEach(Angular.mock.inject(($injector) => {
     $q         = $injector.get('$q');
     $rootScope = $injector.get('$rootScope');
     API        = $injector.get('API');
     Postcard   = $injector.get('Postcard');
   }));
 
-  describe('create', function () {
-    it('calls the correct endpoint with the correct params', function () {
+  describe('create', () => {
+    it('calls the correct endpoint with the correct params', () => {
       var payload = { id: 'psc_id' };
 
       Sinon.stub(API, 'post').returns($q.resolve());
