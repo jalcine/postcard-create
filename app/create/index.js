@@ -1,9 +1,9 @@
 'use strict';
 
-var Angular    = require('angular');
+const Angular = require('angular');
 
-var State      = require('./state');
-var Controller = require('./controller');
+const Controller = require('./controller');
+const State      = require('./state');
 
 module.exports = Angular.module('postcard-create.create', [])
 .controller('CreateCtrl', Controller)
