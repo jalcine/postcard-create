@@ -1,18 +1,18 @@
 'use strict';
 
-var expect  = require('chai').expect;
-var Angular = require('angular');
-var Sinon   = require('sinon');
+const expect  = require('chai').expect;
+const Angular = require('angular');
+const Sinon   = require('sinon');
 
-var Config = require('../../config');
+const Config = require('../../config');
 
 require('angular-mocks');
 
 describe('postcard service', () => {
-  var $q;
-  var $rootScope;
-  var API;
-  var Postcard;
+  let $q;
+  let $rootScope;
+  let API;
+  let Postcard;
 
   beforeEach(Angular.mock.inject(($injector) => {
     $q         = $injector.get('$q');
